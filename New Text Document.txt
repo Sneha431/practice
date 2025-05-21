@@ -1,0 +1,25 @@
+npm i json-server -D
+
+npx json-server db.json
+
+npm i @reduxjs/toolkit
+
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react(),tailwindcss()],
+  optimizeDeps: {
+    esbuildOptions: {
+      loader: {
+        '.js': 'jsx', // 👈 tell Vite to treat .js files as JSX
+      },
+    },
+  },
+ 
+})
+
+npm install tailwindcss @tailwindcss/vite
+npm install @mui/material @emotion/react @emotion/styled

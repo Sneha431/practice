@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@tailwind utilities;
+
+.themebg {
+  @apply bg-orange-500;
+}
+
+
+
